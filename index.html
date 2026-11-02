@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سياسة الخصوصية | تطبيق محفظتي (Mahfazti Privacy Policy)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #10b981;
+            --primary-dark: #059669;
+            --primary-light: #ecfdf5;
+            --accent: #0284c7;
+            --bg: #f8fafc;
+            --surface: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #64748b;
+            --border: #e2e8f0;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --header-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        [data-theme="dark"] {
+            --bg: #090d16;
+            --surface: #131b2e;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --border: #1e293b;
+            --primary-light: rgba(16, 185, 129, 0.1);
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+            --header-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+        }
+
+        body {
+            font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.8;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body.lang-en {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+            box-shadow: var(--header-shadow);
+            backdrop-filter: blur(8px);
+        }
+
+        .header-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 800;
+            font-size: 1.35rem;
+            color: var(--text-main);
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            width: 42px;
+            height: 42px;
+            background: linear-gradient(135deg, #10b981 0%, #0284c7 100%);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.3rem;
+            box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3);
+        }
+
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .btn-toggle {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            padding: 0.45rem 0.9rem;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .btn-toggle:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+
+        .main-container {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+            flex: 1;
+            width: 100%;
+        }
+
+        .hero-banner {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 2.2rem;
+            margin-bottom: 2rem;
+            box-shadow: var(--card-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-banner::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            left: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #10b981, #0284c7);
+        }
+
+        .badge {
+            display: inline-block;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        [data-theme="dark"] .badge {
+            color: #34d399;
+        }
+
+        .hero-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.75rem;
+            color: var(--text-main);
+            line-height: 1.3;
+        }
+
+        .hero-subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 1.8rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--card-shadow);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .card-header-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: var(--primary-light);
+            color: var(--primary-dark);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            flex-shrink: 0;
+        }
+
+        [data-theme="dark"] .card-header-icon {
+            color: #34d399;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .card-body {
+            color: var(--text-main);
+            font-size: 0.98rem;
+        }
+
+        .card-body p {
+            margin-bottom: 0.9rem;
+        }
+
+        .card-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style-position: inside;
+            margin-top: 0.5rem;
+            margin-bottom: 0.8rem;
+            color: var(--text-main);
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: var(--primary-light);
+            border-inline-start: 4px solid var(--primary);
+            padding: 1rem 1.25rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        .contact-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(2, 132, 199, 0.08) 100%);
+            border: 1px dashed var(--primary);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1rem;
+        }
+
+        .footer {
+            background: var(--surface);
+            border-top: 1px solid var(--border);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-top: auto;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        @media (max-width: 640px) {
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            .card {
+                padding: 1.4rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#" class="brand">
+                <div class="brand-icon">💼</div>
+                <span id="brandName">محفظتي</span>
+            </a>
+            <div class="controls">
+                <button class="btn-toggle" id="langToggle" onclick="toggleLanguage()">
+                    🌐 <span id="langLabel">English</span>
+                </button>
+                <button class="btn-toggle" id="themeToggle" onclick="toggleTheme()" title="تبديل المظهر">
+                    🌙
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-container">
+
+        <!-- ================= ARABIC CONTENT ================= -->
+        <div id="content-ar">
+            <div class="hero-banner">
+                <span class="badge">تطبيق محفظتي (Mahfazti)</span>
+                <h1 class="hero-title">سياسة الخصوصية وحماية البيانات</h1>
+                <p class="hero-subtitle">آخر تحديث: 2 نوفمبر 2026</p>
+            </div>
+
+            <!-- مقدمة -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">🛡️</div>
+                    <h2 class="card-title">1. التزامنا تجاه خصوصيتك المالية</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        نحن في تطبيق <strong>"محفظتي" (Mahfazti)</strong> ندرك تماماً أن بياناتك المالية الشخصية هي من أكثر المعلومات حساسية وخصوصية. ولذلك تم تصميم وهندسة التطبيق بمبدأ <strong>"الخصوصية والسيادة أولاً" (Privacy & Data Sovereignty by Design)</strong>.
+                    </p>
+                    <p>
+                        توضح هذه السياسة طبيعة البيانات التي يتعامل معها التطبيق، وكيفية حمايتها، وحقوقك الكاملة في إدارتها وحذفها وفق أعلى معايير أمان الهواتف المحمولة ومتطلبات متجر Google Play ومتجر Apple App Store.
+                    </p>
+                </div>
+            </div>
+
+            <!-- نوعية البيانات وتخزينها -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">📂</div>
+                    <h2 class="card-title">2. البيانات التي يتم التعامل معها وكيفية تخزينها</h2>
+                </div>
+                <div class="card-body">
+                    <p>يعمل تطبيق محفظتي كدفتر حسابات مالي شخصي غير مرتبط بحسابات بنكية مصرفية مفتوحة (Non-custodial & Offline-first). وتشمل البيانات:</p>
+                    <ul>
+                        <li><strong>البيانات المالية المدخلة يدوياً:</strong> المعاملات (المصروفات، الإيرادات)، المحافظ، والالتزامات، وتقييم الأصول (مثل حيازة الذهب أو العملات الأجنبية).</li>
+                        <li><strong>التخزين المحلي والأوفلاين:</strong> يتم تخزين جميع سجلاتك المالية داخل قاعدة بيانات محلية مشفرة على هاتفك أولاً، وتعمل بكفاءة 100% دون الحاجة إلى اتصال بالإنترنت.</li>
+                        <li><strong>المزامنة السحابية (اختيارية):</strong> في حال تفعيل المزامنة أو التسجيل السحابي عبر Firebase، يتم نقل بياناتك عبر بروتوكولات آمنة ومحمية (SSL/TLS)، ولا يمكن لأي طرف خارجي الاطلاع عليها.</li>
+                    </ul>
+                    <div class="highlight-box">
+                        📌 <strong>لا نبيع أو نؤجر أو نشارك أي بيانات مالية مع أي جهة إعلانية أو تجارية أو سماسرة بيانات نهائياً.</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- الصلاحيات المستخدمة -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">🔑</div>
+                    <h2 class="card-title">3. الصلاحيات المطلوبة على هاتفك وسبب طلبها</h2>
+                </div>
+                <div class="card-body">
+                    <p>يطلب التطبيق الحد الأدنى من الصلاحيات الضرورية لتشغيل المزايا فقط:</p>
+                    <ul>
+                        <li>
+                            <strong>صلاحية القياسات الحيوية (Biometric / Fingerprint / Face ID):</strong>
+                            تُستخدم فقط للتحقق من هويتك محلياً لقفل وفتح التطبيق، وحماية واجهتك من المتطفلين. <em>لا يقوم التطبيق بالوصول إلى بصمتك أو تخزينها أو إرسالها خارج الجهاز أبداً</em>؛ حيث يتم التحقق عبر نظام الحماية المدمج في نظام Android/iOS نفسه.
+                        </li>
+                        <li>
+                            <strong>صلاحية الإشعارات والتنبيهات (Post Notifications):</strong>
+                            تُستخدم لإرسال تنبيهات وتذكيرات محلية بمواعيد استحقاق الفواتير والالتزامات المالية قبل موعدها.
+                        </li>
+                        <li>
+                            <strong>صلاحية حفظ الملفات ومشاركتها (Storage / Files):</strong>
+                            تُستخدم حصرياً عندما تطلب بنفسك تصدير تقارير معاملاتك بصيغة (Excel / CSV) أو حفظ واستعادة النسخ الاحتياطية المشفرة (AES-256).
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ميزة حجب الأرقام والخصوصية البصرية -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">👁️</div>
+                    <h2 class="card-title">4. درع الخصوصية البصرية (Privacy Eye Shield)</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        يحتوي التطبيق على ميزة <strong>"عين الخصوصية"</strong> التي تسمح لك بإخفاء الأرصدة والمبالغ النقدية بنقرة واحدة (•••••• ج.م) أثناء التواجد في الأماكن العامة، بالإضافة إلى <strong>القفل التلقائي عند خمول التطبيق</strong> في الخلفية لضمان عدم اطلاع أي شخص على شاشتك.
+                    </p>
+                </div>
+            </div>
+
+            <!-- خدمات الطرف الثالث -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">🌐</div>
+                    <h2 class="card-title">5. خدمات الطرف الثالث (Third-Party Services)</h2>
+                </div>
+                <div class="card-body">
+                    <p>قد يستعين التطبيق بخدمات موثوقة من شركات عالمية لضمان استقرار التطبيق وجودته:</p>
+                    <ul>
+                        <li><strong>Google Firebase / Cloud Firestore:</strong> لتوفير بنية سحابية آمنة للمزامنة (إذا اختار المستخدم المزامنة السحابية).</li>
+                        <li><strong>Firebase Crashlytics:</strong> لجمع تقارير تقنية مجهولة الهوية ومجردة من أي بيانات شخصية في حالة حدوث توقف مفاجئ (Crashes) لإصلاح الأخطاء البرمجية.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- حذف البيانات وحقوق المستخدم -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">🗑️</div>
+                    <h2 class="card-title">6. حذف البيانات والتحكم الكامل (Data Retention & Deletion)</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        وفقاً لسياسات Google Play ومتطلبات الخصوصية العالمية، يحق لك في أي وقت:
+                    </p>
+                    <ul>
+                        <li>حذف كافة بياناتك المحلية فوراً من خلال خيار <strong>"مسح البيانات / إعادة الضبط"</strong> داخل إعدادات التطبيق أو عبر مسح بيانات التطبيق من إعدادات الهاتف.</li>
+                        <li>تصدير بياناتك بالكامل في أي وقت دون أي قيود (Data Portability).</li>
+                        <li>
+                            في حال كان لديك حساب سحابي ترغب في حذفه نهائياً مع كافة المعاملات المرتبطة به، يمكنك طلب ذلك مباشرة من داخل التطبيق أو مراسلتنا على البريد الإلكتروني الموضح أدناه وسنقوم بحذف كافة سجلاتك السحابية نهائياً ودون رجعة خلال 48 ساعة.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- خصوصية الأطفال -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">👶</div>
+                    <h2 class="card-title">7. خصوصية الأطفال (Children's Privacy)</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        تطبيق محفظتي غير موجه للأطفال دون سن 13 عاماً، ولا نقوم عمداً بجمع أي معلومات شخصية تخص الأطفال. إذا علمت أن طفلاً قد زودنا بمعلومات دون موافقة الوالدين، يرجى التواصل معنا لحذفها فوراً.
+                    </p>
+                </div>
+            </div>
+
+            <!-- التواصل والاستفسارات -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">📬</div>
+                    <h2 class="card-title">8. اتصل بنا</h2>
+                </div>
+                <div class="card-body">
+                    <p>إذا كانت لديك أي أسئلة أو استفسارات أو طلبات لحذف البيانات، يمكنك التواصل مع فريق التطوير مباشرة:</p>
+                    <div class="contact-box">
+                        <p><strong>اسم التطبيق:</strong> محفظتي (Mahfazti)</p>
+                        <p><strong>المطور:</strong> فريق محفظتي (Mahfazti Development Team)</p>
+                        <p><strong>البريد الإلكتروني للدعم والخصوصية:</strong> <a href="mailto:support@mahfazti.app" style="color: var(--accent); font-weight: bold; text-decoration: none;">support@mahfazti.app</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ================= ENGLISH CONTENT ================= -->
+        <div id="content-en" class="hidden">
+            <div class="hero-banner">
+                <span class="badge">Mahfazti App</span>
+                <h1 class="hero-title">Privacy Policy & Data Security</h1>
+                <p class="hero-subtitle">Last Updated: November 2, 2026</p>
+            </div>
+
+            <!-- Introduction -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">🛡️</div>
+                    <h2 class="card-title">1. Our Commitment to Your Financial Privacy</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        At <strong>Mahfazti (محفظتي)</strong>, we understand that personal financial data is among the most sensitive information you possess. That is why our application was built from the ground up on the principle of <strong>"Privacy & Data Sovereignty by Design"</strong>.
+                    </p>
+                    <p>
+                        This Privacy Policy outlines how your data is handled, stored, protected, and the complete control you have over your data in accordance with Google Play Developer Policies and Apple App Store Review Guidelines.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Data Collected & Storage -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">📂</div>
+                    <h2 class="card-title">2. Information Handled & Storage Mechanisms</h2>
+                </div>
+                <div class="card-body">
+                    <p>Mahfazti operates as a non-custodial, offline-first personal financial tracker:</p>
+                    <ul>
+                        <li><strong>Manually Input Financial Records:</strong> Income, expenses, category tags, wallets, commitments/bills, and self-reported asset values (e.g., gold holdings, foreign currency balances).</li>
+                        <li><strong>Local & Offline Storage:</strong> Your records are stored in a secured local database directly on your device. The app operates with 100% functionality without an active internet connection.</li>
+                        <li><strong>Optional Cloud Synchronization:</strong> If cloud backup/synchronization is enabled via Firebase, data is encrypted in transit using industry-standard TLS/SSL encryption and securely isolated to your account.</li>
+                    </ul>
+                    <div class="highlight-box">
+                        📌 <strong>We do not sell, rent, monetize, or broker any of your personal or financial data to advertisers or third parties under any circumstances.</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Device Permissions -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">🔑</div>
+                    <h2 class="card-title">3. Device Permissions & Purpose of Use</h2>
+                </div>
+                <div class="card-body">
+                    <p>Mahfazti requests only the essential device permissions necessary to deliver core features:</p>
+                    <ul>
+                        <li>
+                            <strong>Biometric Authentication (Fingerprint / Face ID):</strong>
+                            Used strictly for local authentication to lock and unlock the application. <em>The app never accesses, reads, or transmits your biometric templates</em>; authentication is handled solely by the hardware-backed Android BiometricPrompt / iOS LocalAuthentication APIs.
+                        </li>
+                        <li>
+                            <strong>Notifications:</strong>
+                            Used to deliver local on-device reminders for upcoming financial commitments, recurring debts, or budget notifications.
+                        </li>
+                        <li>
+                            <strong>Storage / File Access:</strong>
+                            Used solely when you explicitly choose to export reports (Excel/CSV) or save/restore AES-256 encrypted local backup files.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Visual Privacy Eye -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">👁️</div>
+                    <h2 class="card-title">4. Privacy Eye Shield & Inactivity Lock</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Mahfazti includes a built-in <strong>Privacy Eye</strong> feature allowing one-tap masking of all monetary balances (•••••• EGP) while in public places, as well as an automated inactivity lock when the app transitions to the background.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Third-Party Services -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">🌐</div>
+                    <h2 class="card-title">5. Third-Party Services & Infrastructure</h2>
+                </div>
+                <div class="card-body">
+                    <p>We may use trusted platform infrastructure providers to maintain application reliability:</p>
+                    <ul>
+                        <li><strong>Google Firebase / Cloud Firestore:</strong> Cloud infrastructure for optional multi-device account sync.</li>
+                        <li><strong>Firebase Crashlytics:</strong> Anonymous, non-identifiable crash analytics to diagnose application instability and release bug fixes.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Data Retention & Deletion -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">🗑️</div>
+                    <h2 class="card-title">6. User Control & Account/Data Deletion</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        In full adherence to Google Play data safety requirements and GDPR principles:
+                    </p>
+                    <ul>
+                        <li><strong>Instant Local Deletion:</strong> You can wipe all stored local financial data at any time via the "Reset Data" option in app settings or by clearing the app storage on your device.</li>
+                        <li><strong>Data Portability:</strong> You can export your entire transaction history to Excel/CSV or encrypted JSON at any time.</li>
+                        <li>
+                            <strong>Cloud Data Deletion Request:</strong> If you registered an account with cloud sync and wish to permanently delete your account and all associated cloud records, you can execute this inside the app or email our support team. All associated cloud data will be permanently wiped within 48 hours.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Children's Privacy -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">👶</div>
+                    <h2 class="card-title">7. Children's Privacy</h2>
+                </div>
+                <div class="card-body">
+                    <p>
+                        Our service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13. If you are a parent or guardian and become aware that your child has provided us with personal data, please contact us.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-header-icon">📬</div>
+                    <h2 class="card-title">8. Contact Us</h2>
+                </div>
+                <div class="card-body">
+                    <p>If you have any questions, inquiries, or requests regarding this Privacy Policy or your data, please contact us at:</p>
+                    <div class="contact-box">
+                        <p><strong>App Name:</strong> Mahfazti (محفظتي)</p>
+                        <p><strong>Developer:</strong> Mahfazti Development Team</p>
+                        <p><strong>Privacy & Support Email:</strong> <a href="mailto:support@mahfazti.app" style="color: var(--accent); font-weight: bold; text-decoration: none;">support@mahfazti.app</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 محفظتي (Mahfazti). All Rights Reserved.</p>
+    </footer>
+
+    <!-- Script for language and theme toggle -->
+    <script>
+        let currentLang = 'ar';
+        let currentTheme = 'light';
+
+        function toggleLanguage() {
+            const arContent = document.getElementById('content-ar');
+            const enContent = document.getElementById('content-en');
+            const langLabel = document.getElementById('langLabel');
+            const brandName = document.getElementById('brandName');
+            const html = document.documentElement;
+
+            if (currentLang === 'ar') {
+                currentLang = 'en';
+                arContent.classList.add('hidden');
+                enContent.classList.remove('hidden');
+                document.body.classList.add('lang-en');
+                html.setAttribute('lang', 'en');
+                html.setAttribute('dir', 'ltr');
+                langLabel.textContent = 'العربية';
+                brandName.textContent = 'Mahfazti';
+            } else {
+                currentLang = 'ar';
+                enContent.classList.add('hidden');
+                arContent.classList.remove('hidden');
+                document.body.classList.remove('lang-en');
+                html.setAttribute('lang', 'ar');
+                html.setAttribute('dir', 'rtl');
+                langLabel.textContent = 'English';
+                brandName.textContent = 'محفظتي';
+            }
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const themeToggleBtn = document.getElementById('themeToggle');
+            if (currentTheme === 'light') {
+                currentTheme = 'dark';
+                html.setAttribute('data-theme', 'dark');
+                themeToggleBtn.textContent = '☀️';
+            } else {
+                currentTheme = 'light';
+                html.removeAttribute('data-theme');
+                themeToggleBtn.textContent = '🌙';
+            }
+        }
+
+        // Auto detect system dark mode preference
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            toggleTheme();
+        }
+    </script>
+</body>
+</html>
